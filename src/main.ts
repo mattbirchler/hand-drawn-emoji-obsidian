@@ -1,6 +1,7 @@
 import { Notice, Plugin } from "obsidian";
 import type { Extension } from "@codemirror/state";
 import { DomReplacer } from "./dom";
+import { emojiEditorExtension } from "./editor";
 import { loadEmbeddedPack } from "./embedded-pack";
 import { EMOJI_SUPPORTED } from "./match";
 import { EmojiPack } from "./pack";
@@ -63,6 +64,7 @@ export default class FrankMojiPlugin extends Plugin {
     if (!EMOJI_SUPPORTED) return;
     this.editorExtensions.length = 0;
     if (this.settings.enabled) {
+      this.editorExtensions.push(emojiEditorExtension((file) => this.pack.urlFor(file)));
       for (const doc of this.openDocuments()) this.dom.attach(doc);
     } else {
       this.dom.detachAll();
