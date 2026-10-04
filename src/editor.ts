@@ -33,6 +33,9 @@ export function emojiEditorExtension(urlFor: (file: string) => string | undefine
     const builder = new RangeSetBuilder<Decoration>();
     for (const { from, to } of view.visibleRanges) {
       for (const match of findEmoji(view.state.sliceDoc(from, to))) {
+        // Obsidian reads the "#" in the #️⃣ keycap as the start of a tag and
+        // styles it in two pieces, which would draw the emoji twice.
+        if (match.text.startsWith("#")) continue;
         const mark = markFor(match.file);
         if (!mark) continue;
         const start = from + match.index;
@@ -56,6 +59,6 @@ export function emojiEditorExtension(urlFor: (file: string) => string | undefine
         }
       }
     },
-    { decorations: (plugin) => plugin.decorations },
+    { decorations: (value) => value.decorations },
   );
 }

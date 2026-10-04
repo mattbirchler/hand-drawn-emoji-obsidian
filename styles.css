@@ -1,23 +1,20 @@
 /* The original emoji stays in the text for copy, search, and screen readers. Only the glyph is hidden. */
 .frankmoji,
 .frankmoji-editor {
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: none !important;
-  background-image: var(--frankmoji-image) !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: contain !important;
-}
-
-span.frankmoji {
   display: inline-block !important;
   width: 1.2em !important;
   height: 1.2em !important;
   line-height: 1.2em !important;
   vertical-align: -0.2em !important;
   overflow: hidden !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
   text-align: center !important;
+  background-image: var(--frankmoji-image) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
 }
 
 .frankmoji-about {
