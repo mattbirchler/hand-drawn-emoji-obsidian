@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags: ["*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check the tag matches the manifest and has release notes
+        run: |
+          version=$(node -p "require('./manifest.json').version")
+          if [ "$version" != "${{ github.ref_name }}" ]; then
+            echo "Tag ${{ github.ref_name }} does not match manifest version $version"
+            exit 1
+          fi
+          if [ ! -s "release-notes/${{ github.ref_name }}.md" ]; then
+            echo "Write release-notes/${{ github.ref_name }}.md before tagging"
+            exit 1
+          fi
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" main.js manifest.json styles.css \
+            --title "${{ github.ref_name }}" \
+            --notes-file "release-notes/${{ github.ref_name }}.md"

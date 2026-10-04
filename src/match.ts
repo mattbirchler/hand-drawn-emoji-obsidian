@@ -20,7 +20,7 @@ function compile(): RegExp | null {
 
 const EMOJI_RE = compile();
 // Every emoji has at least one character outside ASCII, so plain text can skip the slow pattern.
-const NON_ASCII_RE = /[^\x00-\x7F]/;
+const NON_ASCII_RE = /[\u0080-\uFFFF]/;
 
 export const EMOJI_SUPPORTED = EMOJI_RE !== null;
 

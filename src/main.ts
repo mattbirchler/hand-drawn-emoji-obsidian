@@ -14,11 +14,12 @@ export default class FrankMojiPlugin extends Plugin {
   private editorExtensions: Extension[] = [];
 
   async onload() {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    const saved = (await this.loadData()) as Partial<FrankMojiSettings> | null;
+    this.settings = { ...DEFAULT_SETTINGS, ...saved };
     this.addSettingTab(new FrankMojiSettingTab(this.app, this));
 
     if (!EMOJI_SUPPORTED) {
-      new Notice("FrankMoji needs a newer version of Obsidian. Install the latest version from obsidian.md, then try again.");
+      new Notice("This plugin needs a newer version of Obsidian. Update the app, then try again.");
       return;
     }
 

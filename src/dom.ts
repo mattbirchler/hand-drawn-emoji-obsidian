@@ -82,6 +82,7 @@ export class DomReplacer {
     const parent = textNode.parentElement;
     if (!parent || shouldSkip(parent)) return;
 
+    // Popout windows have their own document, so build nodes in the one the text lives in.
     const doc = textNode.ownerDocument;
     const fragment = doc.createDocumentFragment();
     let last = 0;

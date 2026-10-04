@@ -19,7 +19,7 @@ export class FrankMojiSettingTab extends PluginSettingTab {
     containerEl.empty();
 
     new Setting(containerEl)
-      .setName("Show FrankMoji")
+      .setName("Replace emoji")
       .setDesc("Turn off to go back to your system's emoji. Your notes are never changed either way.")
       .addToggle((toggle) =>
         toggle.setValue(this.plugin.settings.enabled).onChange((value) => this.plugin.setEnabled(value)),
