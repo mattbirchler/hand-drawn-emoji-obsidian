@@ -1,0 +1,10 @@
+{
+  "id": "frankmoji-everywhere",
+  "name": "FrankMoji Everywhere",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Replace standard emoji in your notes and across the app with FrankMoji, the emoji set by Frank Rausch.",
+  "author": "Matt Birchler",
+  "authorUrl": "https://birchtree.me",
+  "isDesktopOnly": false
+}
