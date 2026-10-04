@@ -24,7 +24,6 @@ toggle in the plugin's settings.
   keep the system emoji. Everything else in the note uses FrankMoji.
 - The whole emoji set ships inside the plugin. Nothing is downloaded and the
   plugin makes no network requests.
-- It works on desktop and mobile.
 
 ## How it works
 
