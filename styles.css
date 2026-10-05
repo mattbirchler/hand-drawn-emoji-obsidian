@@ -1,23 +1,19 @@
 /* The original emoji stays in the text for copy, search, and screen readers. Only the glyph is hidden. */
-.frankmoji,
-.frankmoji-editor {
-  display: inline-block !important;
-  width: 1.2em !important;
-  height: 1.2em !important;
-  line-height: 1.2em !important;
-  vertical-align: -0.2em !important;
-  overflow: hidden !important;
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: none !important;
-  text-align: center !important;
-  background-image: var(--frankmoji-image) !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: contain !important;
-}
-
-.frankmoji-about {
-  color: var(--text-muted);
-  font-size: var(--font-ui-small);
+/* The body and span parts are there to outrank theme rules that style spans. */
+body span.frankmoji,
+body span.frankmoji-editor {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.2em;
+  vertical-align: -0.2em;
+  overflow: hidden;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  text-align: center;
+  background-image: var(--frankmoji-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
