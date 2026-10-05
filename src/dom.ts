@@ -82,20 +82,17 @@ export class DomReplacer {
     const parent = textNode.parentElement;
     if (!parent || shouldSkip(parent)) return;
 
-    // Popout windows have their own document, so build nodes in the one the text lives in.
-    const doc = textNode.ownerDocument;
-    const fragment = doc.createDocumentFragment();
+    // The nodes move into the text's own document (a popout window has its
+    // own) when the fragment replaces the text node.
+    const fragment = createFragment();
     let last = 0;
     let changed = false;
     for (const match of matches) {
       const url = this.urlFor(match.file);
       if (!url) continue;
       if (match.index > last) fragment.append(text.slice(last, match.index));
-      const span = doc.createElement("span");
-      span.className = TEXT_CLASS;
-      span.textContent = match.text;
+      const span = fragment.createSpan({ cls: TEXT_CLASS, text: match.text });
       span.style.setProperty(IMAGE_PROPERTY, `url("${url}")`);
-      fragment.append(span);
       last = match.index + match.text.length;
       changed = true;
     }
