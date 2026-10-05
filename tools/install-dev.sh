@@ -4,7 +4,7 @@
 set -e
 cd "$(dirname "$0")/.."
 vault="${1:-$HOME/Obsidian/Birchler-alt}"
-dest="$vault/.obsidian/plugins/frankmoji-everywhere"
+dest="$vault/.obsidian/plugins/hand-drawn-emoji"
 npm run build
 mkdir -p "$dest"
 cp main.js manifest.json styles.css "$dest/"

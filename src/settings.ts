@@ -28,11 +28,16 @@ export class FrankMojiSettingTab extends PluginSettingTab {
     const about = containerEl.createEl("p", { cls: "frankmoji-about" });
     about.appendText("The emoji artwork is ");
     about.createEl("a", { text: "FrankMoji", href: "https://frankmoji.com/" });
-    about.appendText(" by Frank Rausch, used unmodified under the ");
+    about.appendText(" © 2026 by Frank Rausch, used unmodified under the ");
     about.createEl("a", {
       text: "CC BY-NC-ND 4.0",
       href: "https://creativecommons.org/licenses/by-nc-nd/4.0/",
     });
-    about.appendText(" license. FrankMoji has no flags or family emoji, so those stay as they are.");
+    about.appendText(" license. The set has no flags or family emoji, so those stay as they are.");
+
+    containerEl.createEl("p", {
+      cls: "frankmoji-about",
+      text: "This is not an official FrankMoji plugin. It is an independent project that is not made, sponsored, or endorsed by Frank Rausch.",
+    });
   }
 }
