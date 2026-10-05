@@ -1,6 +1,6 @@
 # Hand-drawn Emoji
 
-![Your system's emoji, swapped for something bolder. Eight standard emoji shown next to their hand-drawn replacements.](assets/hero.png)
+![Hand-drawn Emoji: eight standard emoji shown next to their hand-drawn replacements.](assets/hero.png)
 
 An Obsidian plugin that replaces standard emoji with a bold, hand-drawn set. It
 works in your notes (reading view, Live Preview, and source mode) and across
