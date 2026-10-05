@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hand-drawn Emoji Hero</title>
+<!-- Source for assets/hero.png. Render it with tools/render-hero.sh. -->
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    width: 1600px;
+    height: 900px;
+    overflow: hidden;
+    background: #fbf5e6;
+    color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 640px;
+    gap: 72px;
+    align-items: center;
+    padding: 0 96px 40px;
+  }
+  .badge {
+    display: inline-block;
+    border: 3px solid #000;
+    border-radius: 999px;
+    background: #ffdc00;
+    padding: 10px 24px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 36px;
+  }
+  h1 {
+    font-size: 92px;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+    margin: 0 0 32px;
+  }
+  p { font-size: 32px; line-height: 1.35; margin: 0; color: #3d3a33; }
+  .swaps { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .swap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 28px;
+    padding: 22px 28px;
+    box-shadow: 8px 8px 0 #000;
+  }
+  .swap .old { font-size: 64px; line-height: 1; width: 72px; text-align: center; }
+  .swap .arrow { font-size: 40px; font-weight: 800; }
+  .swap img { width: 112px; height: 112px; }
+  .credit {
+    position: absolute;
+    left: 96px;
+    bottom: 40px;
+    font-size: 18px;
+    color: #6b665a;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <div class="badge">Hand-drawn Emoji</div>
+    <h1>Your system's emoji, swapped for something bolder.</h1>
+    <p>An awesome hand-drawn set takes the place of the default emoji, everywhere you see them.</p>
+  </div>
+  <div class="swaps">
+    <div class="swap"><span class="old">😀</span><span class="arrow">→</span><img src="../emoji/grinning-face.svg" alt=""></div>
+    <div class="swap"><span class="old">🚀</span><span class="arrow">→</span><img src="../emoji/rocket.svg" alt=""></div>
+    <div class="swap"><span class="old">🔥</span><span class="arrow">→</span><img src="../emoji/fire.svg" alt=""></div>
+    <div class="swap"><span class="old">🎉</span><span class="arrow">→</span><img src="../emoji/party-popper.svg" alt=""></div>
+    <div class="swap"><span class="old">🍕</span><span class="arrow">→</span><img src="../emoji/pizza.svg" alt=""></div>
+    <div class="swap"><span class="old">👻</span><span class="arrow">→</span><img src="../emoji/ghost.svg" alt=""></div>
+    <div class="swap"><span class="old">🌈</span><span class="arrow">→</span><img src="../emoji/rainbow.svg" alt=""></div>
+    <div class="swap"><span class="old">😎</span><span class="arrow">→</span><img src="../emoji/smiling-face-with-sunglasses.svg" alt=""></div>
+  </div>
+  <div class="credit">Emoji artwork: FrankMoji © 2026 by Frank Rausch, CC BY-NC-ND 4.0. Not an official FrankMoji plugin.</div>
+</body>
+</html>
