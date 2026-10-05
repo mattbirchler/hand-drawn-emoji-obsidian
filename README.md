@@ -1,4 +1,4 @@
-# FrankMoji Everywhere
+# Hand-drawn Emoji
 
 An Obsidian plugin that replaces standard emoji with
 [FrankMoji](https://frankmoji.com/), the emoji set by Frank Rausch. It works in
@@ -10,11 +10,11 @@ copy and paste, search, and screen readers still see the real emoji.
 
 ## Using it
 
-Install **FrankMoji Everywhere** from Community plugins and turn it on. That's
+Install **Hand-drawn Emoji** from Community plugins and turn it on. That's
 it.
 
 To switch back to your system's emoji without disabling the plugin, run
-**FrankMoji Everywhere: Turn on or off** from the command palette, or use the
+**Hand-drawn Emoji: Turn on or off** from the command palette, or use the
 toggle in the plugin's settings.
 
 ## Good to know

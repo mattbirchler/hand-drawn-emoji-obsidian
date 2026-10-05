@@ -1,5 +1,5 @@
 {
-  "name": "frankmoji-everywhere",
+  "name": "hand-drawn-emoji",
   "version": "1.0.0",
   "description": "Obsidian plugin that replaces standard emoji with FrankMoji, the emoji set by Frank Rausch.",
   "main": "main.js",
