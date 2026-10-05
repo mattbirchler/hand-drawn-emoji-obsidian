@@ -1,6 +1,6 @@
 {
   "name": "hand-drawn-emoji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Obsidian plugin that replaces standard emoji with a bold, hand-drawn set. Not an official FrankMoji plugin.",
   "main": "main.js",
   "scripts": {
