@@ -1,0 +1,11 @@
+Hand-drawn Emoji
+
+The MIT license in LICENSE covers the plugin's code only.
+
+The emoji artwork in the emoji/ directory is FrankMoji (https://frankmoji.com/)
+© 2026 by Frank Rausch, licensed under CC BY-NC-ND 4.0
+(https://creativecommons.org/licenses/by-nc-nd/4.0/). See emoji/LICENSE.txt.
+The artwork is included unmodified and is not covered by the MIT license.
+
+This is not an official FrankMoji plugin. It is an independent project that is
+not made, sponsored, or endorsed by Frank Rausch.

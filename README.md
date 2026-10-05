@@ -75,7 +75,8 @@ adds emoji.
 
 ## License
 
-The plugin's code is MIT licensed (see `LICENSE`).
+The plugin's code is MIT licensed (see `LICENSE`). `NOTICE` explains what that
+license does and does not cover.
 
 The emoji artwork in `emoji/` is [FrankMoji](https://frankmoji.com/) © 2026
 Frank Rausch, licensed under
