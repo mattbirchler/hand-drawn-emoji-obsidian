@@ -1,7 +1,7 @@
 {
   "name": "hand-drawn-emoji",
   "version": "1.0.0",
-  "description": "Obsidian plugin that replaces standard emoji with FrankMoji, the emoji set by Frank Rausch.",
+  "description": "Obsidian plugin that replaces standard emoji with a bold, hand-drawn set. Not an official FrankMoji plugin.",
   "main": "main.js",
   "scripts": {
     "pack": "node tools/build-pack.mjs",
